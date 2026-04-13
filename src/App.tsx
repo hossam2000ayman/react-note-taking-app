@@ -35,7 +35,7 @@ export type Tag = {
 };
 
 function App() {
-  // and now we have place to store our nodes and our tags
+  // and now we have place to store our notes and our tags
   const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", []);
   const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", []);
 
