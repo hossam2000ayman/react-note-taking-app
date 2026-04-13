@@ -130,6 +130,12 @@ function App() {
             />
           }
         />
+        {/*
+         Key Rules to Remember about index Routes:
+         No Path Prop: An index route cannot have a path prop. It inherits the path of its parent.
+         Always a Leaf: Index routes do not have child routes of their own.
+         The Default View: They are strictly used to define what should appear in a parent's <Outlet /> when no specific child route is matched.
+        */}
         <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
           <Route index element={<Note onDelete={onDeleteNote} />} />
           <Route

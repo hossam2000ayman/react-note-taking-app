@@ -15,6 +15,7 @@ export default function NoteLayout({ notes }: NoteLayoutProps) {
 
   if (note == null) return <Navigate to={"/"} replace />;
 
+  // placeholder for child node to render into
   return <Outlet context={note} />;
 }
 
